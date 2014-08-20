@@ -1,7 +1,12 @@
-<%= form_for @shout do |form| %>
+<%= form_for @text_shout do |form| %>
   <%= form.label :body, "Shout here-->" %>
   <%= form.text_field :body %>
   <%= form.submit "Shout!" %>
+<% end %>
+<p>
+<%= form_for @photo_shout do |form| %>
+  <%= form.file_field :image %>
+  <%= form.submit "Shout your image!" %>
 <% end %>
 <p>
 <%= render @shouts %>
